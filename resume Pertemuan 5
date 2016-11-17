@@ -1,0 +1,124 @@
+DATA GEOSPASIAL
+
+Latar Belakang
+
+Geospasial merupakan suatu hal yang penting dalam sebuah pembelajaran geografi. Karena dalam pembelajaran geografi selalu mengutamakan dan  kurikulum sebagai acuan
+
+ 
+
+Informasi Geospasial semakin penting dalam pembangunan, namun masih banyak permasalahan yang mucul karena belum adanya peraturan perundang-undangan yang khusus mengatur tentang  informasi geospasial.  
+
+ 
+
+geospasial merupakan suatu hal yang sagat penting dalam pembelajaran geografi. Karena dalam pembelajaran geografi selalu mengutamakan pemahaman spasial karena itu merupakan salah satu ciri khas dibandingkan dengan pelajaran lain. Dalam sebuah pembelajran kurikulum dapat kita buat sebagai acuan utama dalam pembelajaran, penerapannya perlu diupayakan sesuai dengan kaidah dan esensi Ilmu Geografi itu sendiri.
+
+ 
+
+Terdapat 3 sumber data yang dapat diperoleh dari sistem informasi geospasial, diantaranya: 
+
+1.  Data Lapangan
+
+2.      Data Peta yaitu data  berupa informasi yang dicetak pada peta/film. 
+
+3.      Data Penginderaan Jauh 
+
+ 
+
+Pembahasan
+
+Data spasial (data keruangan) adalah data dalam bentuk grafis yang menunjukkan ruang lokasi atau tempat-tempat di permukaan bumi. Data spasial dilambangkan dengan titik, garis, dan polygon agar dapat di ketahui dimana letak sebuah lokasi.
+
+ 
+
+Data atribut adalah data yang memberi penjelasan atau deskripsi atas setiap objek di permukaan bumi. Data atribut berfungsi untuk menggambarkan perbedaan topografi karena memiliki aspek deskriptif dan kualitatif.
+
+ 
+
+Data adalah fakta mengenai objek, peristiwa, dan aktivitas yang dinyatakan oleh nilai (angaka, karakteristik, contoh: wilayah kecamatan. Contoh data atribut misalnya kepadatan penduduk, jenis tanah, dsb. 
+
+ 
+
+Membuat Data Geospasial
+
+Import shapefile
+
+Masukan variable, misalkan variable a untuk shapefile.writer( )
+
+a = shapefile.writer( )
+
+Jadi, format membuat data geospasial ada 2, yaitu :
+
+.shp => a.point(x,y)
+
+a.poly [(x,y),(v,w)]
+
+.dbf => a.field (‘name.field’,’c’,’40’)
+
+a.record (‘bdg’)
+
+ 
+
+Data geospasial tersebut disimpan menggunakan method a.save(‘file.shp’).
+
+ 
+
+Arti dari method pada writer :
+
+Point (x,y)                   : memasukkan data berbentuk paint ke dalam .shp dan seluruh data harus berformat ESRI.1
+
+Poly [(a,b),(c,d)]          : memasukkan data geospasial berbentuk polygon (kembali ke titik awal) atau polyline (tidak kembali ketitik awal).
+
+Field (‘nama’,’c’,’40’)             : artinya membuat atribut polygon dengan table ‘nama’ dengan tipe data varchar dengan panjang 40. Method ini dapat diulang dan dapat dilakukan untuk krbuthan field baru lagi.
+
+Record(‘Bandung’)                 : Mengisi table yang hanya satu field dengan value ‘Bandung’.
+
+Save (‘nama.file’)                    : menyimpan file dengan save file.
+
+1.      Titik (dimensi nol - point)
+
+ 
+
+Representasi ini tidak memiliki dimensi, tetapi dapat diidentifikasikan di atas peta dan dapat ditampilkan pada layar monitor dengan menggunakan simbol-simbol tertentu. Perlu dipahami juga bahwa skala peta akan menentukan apakah suatu objek akan ditampilkan sebagai titik atau polygon. Pada peta skala besar, unsur-unsur bangunan akan ditampilkan sebagai polygon, sedangkan pada skala kecil akan ditampilkan sebagai unsur-unsur titik.
+
+ 
+
+Format titik : koordinat tunggal, tanpa panjang, tanpa luasan.
+
+Contoh : lokasi kecelakaan, letak pohon
+
+2.      Garis (satu dimensi – line atau polyline)
+
+ 
+
+Garis adalah bentuk geometri linier yang akan menghubungkan paling sedikit dua titik dan digunakan untuk merepresentasikan objek-objek yang berdimensi satu. Batas-batas objek geometri polygon juga merupakan garis-garis, demikian pula dengan jaringan listrik, jaringan. Hal ini akan bergantung pada skala peta yang menjadi sumbernya atau skala representasi akhirnya.
+
+ 
+
+Format : Koordinat titik awal dan akhir, mempunyai panjang tanpa luasan.
+Contoh : jalan, sungai, utility
+
+ 
+
+3.      Polygon (dua dimensi – area)
+
+ 
+
+Geometri polygon digunakan untuk merepresentasikan objek-objek dua dimensi. Unsurunsur spasial seperti danau, batas propinsi, batas kota, batas persil tanah milik adalah beberapa contoh tipe entitas dunia nyata yang pada umumnya direpresentasikan sebagai objek-objek dengan geometri polygon. Meskipun demikian, representasi ini masih akan bergantung pada skala petanya atau sajian akhirnya.
+
+ 
+
+Format : Koordinat dengan titik awal dan akhir sama, mempunyai panjang dan luasan.
+
+Contoh : Tanah persil, bangunan
+
+ 
+
+Kesimpulan :
+
+Data spasial (data keruangan) adalah data dalam suatu bentuk grafis yang menunjukkan ruang lokasi atau tempat-tempat di permukaan bumi. Data spasial dilambangkan dengan titik, garis, dan polygon atau yang menunjukkan suatu lokasi.
+
+ 
+
+Saran  :
+
+Dengan  adanya sedikit pembahasan mengenai data geospasial di atas semonga dapat membantu mengetahui lebih baik dari yang belum mengetahuinya dan dapat megembangkan   pengetahuannya.
